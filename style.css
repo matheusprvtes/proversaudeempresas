@@ -158,41 +158,6 @@ p { text-wrap: pretty; }
   .hero__checks li > span:last-child { min-width: 0; }
 }
 
-/* ---------- Form card ---------- */
-.form-card { background: #fff; border-radius: 0; box-shadow: 0 30px 70px -30px rgba(15,40,63,.6); padding: clamp(1.5rem, 2.5vw, 2rem); color: var(--ink); }
-.form-card__head { text-align: center; margin-bottom: 1.2rem; }
-.form-card__head h2 { font-size: 1.4rem; }
-.form-card__head p { color: var(--muted); font-size: .95rem; margin-top: .35rem; }
-.form-card__badge { display: inline-block; background: var(--bg-tint); color: var(--blue-deep); font-weight: 600; font-size: .78rem; padding: .3rem .8rem; border-radius: 0; margin-bottom: .8rem; }
-.field { position: relative; margin-bottom: .95rem; }
-.field input, .field select { width: 100%; font-family: inherit; font-size: 1rem; color: var(--ink); background: #fff; border: 1.5px solid var(--line); border-radius: 0; padding: 1.15rem .95rem .5rem; transition: border-color .2s var(--ease), box-shadow .2s var(--ease); }
-.field select { padding-top: 1.15rem; padding-bottom: .5rem; appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%236d7d90' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right .9rem center; }
-.field label { position: absolute; left: 1rem; top: .95rem; color: var(--muted); font-size: 1rem; pointer-events: none; transition: transform .18s var(--ease), color .18s var(--ease), font-size .18s var(--ease); transform-origin: left top; }
-.field input:focus, .field select:focus { border-color: var(--blue); box-shadow: 0 0 0 4px rgba(40,151,207,.14); }
-.field input:focus + label, .field input:not(:placeholder-shown) + label,
-.field select:focus + label, .field select.has-value + label { transform: translateY(-.62rem) scale(.76); color: var(--blue-deep); }
-.field input::placeholder { color: transparent; }
-.field--error input, .field--error select { border-color: #e04b4b; }
-.field--ok input, .field--ok select { border-color: #9ed3b3; }
-.field__err { display: none; color: #d33; font-size: .8rem; margin-top: .35rem; padding-left: .2rem; }
-.field--error .field__err { display: block; }
-.hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
-.consent { display: flex; gap: .6rem; align-items: flex-start; font-size: .82rem; color: var(--muted); margin: .3rem 0 1rem; }
-.consent input { margin-top: .2rem; width: 18px; height: 18px; accent-color: var(--blue); flex: 0 0 auto; }
-.consent a { color: var(--blue-deep); text-decoration: underline; }
-.form-note { text-align: center; font-size: .78rem; color: var(--muted); margin-top: .8rem; }
-.form-ok { display: none; text-align: center; padding: 1.5rem .5rem; }
-.form-ok .ic { width: 60px; height: 60px; border-radius: 50%; background: var(--green); display: grid; place-items: center; margin: 0 auto 1rem; }
-.form-ok .ic svg { width: 30px; height: 30px; color: #fff; }
-.form-ok h3 { color: var(--navy); margin-bottom: .4rem; }
-.form-ok p { color: var(--muted); font-size: .95rem; }
-.is-sent .form-fields { display: none; }
-.is-sent .form-ok { display: block; }
-/* Feedback de erro empático (falha real de envio) */
-.form-err { display: none; margin-top: .9rem; background: #fdf0f0; border: 1px solid #f3c9c9; padding: .8rem 1rem; }
-.form-err p { color: #a93b3b; font-size: .88rem; }
-.has-error .form-err { display: block; }
-
 /* ---------- Blocos 2 colunas ---------- */
 .split { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(2rem, 5vw, 4rem); align-items: center; }
 .split > * { min-width: 0; }
@@ -239,24 +204,6 @@ p { text-wrap: pretty; }
   .hero__right { display: flex; }
   .hero__media { display: flex; flex: 1; min-height: 0; aspect-ratio: auto; }
 }
-
-/* ---------- Pop-up de contato ---------- */
-html.modal-open { overflow: hidden; }
-.modal { display: none; position: fixed; inset: 0; z-index: 2000; }
-.modal.is-open, .modal:target { display: flex; align-items: center; justify-content: center; }
-.modal__overlay { position: absolute; inset: 0; background: rgba(12,32,52,.62);
-  backdrop-filter: blur(3px); -webkit-backdrop-filter: blur(3px); animation: modalFade .2s var(--ease); }
-.modal__dialog { position: relative; z-index: 1; width: min(460px, calc(100% - 2rem));
-  max-height: calc(100dvh - 2rem); overflow-y: auto; margin: auto; animation: modalPop .28s var(--ease); }
-.modal__dialog .form-card { box-shadow: 0 40px 90px -30px rgba(8,24,40,.72); }
-.modal__close { position: absolute; top: .7rem; right: .7rem; z-index: 5; width: 40px; height: 40px;
-  display: grid; place-items: center; border: 0; cursor: pointer; background: rgba(255,255,255,.92);
-  color: var(--navy); border-radius: 0; box-shadow: 0 4px 14px -6px rgba(0,0,0,.45); }
-.modal__close:hover { background: #fff; color: var(--accent); }
-.modal__close:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
-@keyframes modalFade { from { opacity: 0; } to { opacity: 1; } }
-@keyframes modalPop { from { opacity: 0; transform: translateY(14px) scale(.98); } to { opacity: 1; transform: none; } }
-@media (prefers-reduced-motion: reduce) { .modal__overlay, .modal__dialog { animation: none; } }
 
 /* ---------- Benefícios / Vantagens (cards) ---------- */
 .benefits { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(1rem, 2vw, 1.5rem); align-items: stretch; }
@@ -420,7 +367,7 @@ html.modal-open { overflow: hidden; }
 
 /* =========================================================
    Oculta pop-ups e botões flutuantes do RD Station / Bricks
-   (o contato é feito pelo formulário e pelo CTA da própria LP)
+   (o contato é feito pelos CTAs de WhatsApp da própria LP)
    ========================================================= */
 .bricks--component-popup {
   display: none !important;
