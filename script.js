@@ -336,7 +336,7 @@ var WEBHOOK = {
       }
 
       // Tracking (Meta/GA/GTM)
-      if (window.dataLayer) window.dataLayer.push({ event: "lead_form_submit", lp: "empresas" });
+      if (window.dataLayer) window.dataLayer.push({ event: "lead_form_submit" });
       if (typeof window.fbq === "function") window.fbq("track", "Lead");
 
       // RD Station (campos padrão do lead)
@@ -425,8 +425,7 @@ var WEBHOOK = {
   document.querySelectorAll("[data-cta], [data-wa]").forEach(function (btn) {
     btn.addEventListener("click", function () {
       var id = btn.getAttribute("data-cta") || "whatsapp";
-      if (window.dataLayer) window.dataLayer.push({ event: "cta_click", cta: id, lp: "empresas" });
-      if (typeof window.fbq === "function") window.fbq("track", "Contact");
+      if (window.dataLayer) window.dataLayer.push({ event: "cta_click", cta: id });
     });
   });
 

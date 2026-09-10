@@ -39,6 +39,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 <link rel="stylesheet" href="style.css" />
 
+<!-- ====== GOOGLE TAG MANAGER / PIXELS (inserir no <head>) ====== -->
+
+<!-- GA4 (G-FNXVV5NJT7) removido: a tag é disparada pelo GTM-T75TMNZ6, evitando duplicidade -->
+
 <!-- Meta Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)
@@ -123,29 +127,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="hero__text" data-reveal>
         <div class="hero__eyebrow">
           <span class="tag">Prover Saúde para Empresas</span>
-          <span class="sub">Corporate Care Pass</span>
         </div>
 
         <figure class="hero__carousel media-frame media-frame--s2">
           <div class="carousel" aria-roledescription="carrossel" aria-label="Saúde corporativa pelo Sistema Prover Saúde">
             <div class="carousel__track">
-              <picture class="carousel__slide is-active">
-                <source type="image/webp" srcset="assets/telemedicina.webp" />
-                <img src="assets/telemedicina.jpg" width="1600" height="1067" alt="Colaboradora em consulta por telemedicina, acenando para a médica na tela do celular" loading="eager" fetchpriority="high" decoding="async" />
+              <picture class="carousel__slide carousel__slide--cover is-active">
+                <img src="assets/prover-heart.jpg" width="598" height="881" alt="Mãos segurando um coração azul com a marca Prover Saúde, ao lado de um estetoscópio" loading="eager" fetchpriority="high" decoding="async" />
               </picture>
               <picture class="carousel__slide">
                 <source type="image/webp" srcset="assets/medico-rede.webp" />
                 <img src="assets/medico-rede.jpg" width="1600" height="1068" alt="Médico da rede credenciada sorrindo, de jaleco e estetoscópio" loading="lazy" decoding="async" />
               </picture>
-              <picture class="carousel__slide">
-                <source type="image/webp" srcset="assets/atendimento-humanizado.webp" />
-                <img src="assets/atendimento-humanizado.jpg" width="1600" height="1067" alt="Profissional de saúde acolhendo um paciente na recepção da clínica" loading="lazy" decoding="async" />
-              </picture>
             </div>
             <div class="carousel__dots" role="tablist" aria-label="Selecionar imagem">
               <button class="carousel__dot is-active" type="button" role="tab" aria-selected="true" aria-label="Imagem 1"></button>
               <button class="carousel__dot" type="button" role="tab" aria-selected="false" aria-label="Imagem 2"></button>
-              <button class="carousel__dot" type="button" role="tab" aria-selected="false" aria-label="Imagem 3"></button>
             </div>
           </div>
         </figure>
@@ -174,23 +171,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <figure class="hero__media media-frame">
           <div class="carousel" aria-roledescription="carrossel" aria-label="Saúde corporativa pelo Sistema Prover Saúde">
             <div class="carousel__track">
-              <picture class="carousel__slide is-active">
-                <source type="image/webp" srcset="assets/telemedicina.webp" />
-                <img src="assets/telemedicina.jpg" width="1600" height="1067" alt="Colaboradora em consulta por telemedicina, acenando para a médica na tela do celular" loading="eager" fetchpriority="high" decoding="async" />
+              <picture class="carousel__slide carousel__slide--cover is-active">
+                <img src="assets/prover-heart.jpg" width="598" height="881" alt="Mãos segurando um coração azul com a marca Prover Saúde, ao lado de um estetoscópio" loading="eager" fetchpriority="high" decoding="async" />
               </picture>
               <picture class="carousel__slide">
                 <source type="image/webp" srcset="assets/medico-rede.webp" />
                 <img src="assets/medico-rede.jpg" width="1600" height="1068" alt="Médico da rede credenciada sorrindo, de jaleco e estetoscópio" loading="lazy" decoding="async" />
               </picture>
-              <picture class="carousel__slide">
-                <source type="image/webp" srcset="assets/atendimento-humanizado.webp" />
-                <img src="assets/atendimento-humanizado.jpg" width="1600" height="1067" alt="Profissional de saúde acolhendo um paciente na recepção da clínica" loading="lazy" decoding="async" />
-              </picture>
             </div>
             <div class="carousel__dots" role="tablist" aria-label="Selecionar imagem">
               <button class="carousel__dot is-active" type="button" role="tab" aria-selected="true" aria-label="Imagem 1"></button>
               <button class="carousel__dot" type="button" role="tab" aria-selected="false" aria-label="Imagem 2"></button>
-              <button class="carousel__dot" type="button" role="tab" aria-selected="false" aria-label="Imagem 3"></button>
             </div>
           </div>
         </figure>
@@ -387,10 +378,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </nav>
   </div>
   <div class="container footer__legal">
-    <!-- CONFIRMAR AS URLs com a Prover Saúde antes de publicar -->
-    <a href="https://proversaude.com.br/politica-de-privacidade" target="_blank" rel="noopener">Política de Privacidade</a>
-    <span aria-hidden="true">·</span>
-    <a href="https://proversaude.com.br/termos-de-uso" target="_blank" rel="noopener">Termos de Uso</a>
+    <a href="politica-privacidade.html">Política de Privacidade</a>
   </div>
   <div class="container footer__bottom">
     <p>&copy; <span id="year">2026</span> Sistema&nbsp;Prover&nbsp;Saúde · Proteção e Prevenção. Todos os direitos reservados.</p>
@@ -410,7 +398,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <!-- Cookies (LGPD) -->
 <div class="cookie" id="cookie" role="dialog" aria-live="polite" aria-label="Aviso de cookies" hidden>
-  <p>Utilizamos cookies para melhorar sua experiência e analisar o tráfego. Ao continuar, você concorda com a nossa Política de Privacidade.</p>
+  <p>Utilizamos cookies para melhorar sua experiência e analisar o tráfego. Ao continuar, você concorda com a nossa <a href="politica-privacidade.html">Política de Privacidade</a>.</p>
   <div class="cookie__actions">
     <button class="btn btn--ghost btn--sm" id="cookieDecline" type="button">Recusar</button>
     <button class="btn btn--accent btn--sm" id="cookieAccept" type="button">Aceitar</button>
@@ -466,7 +454,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <span class="field__err">Informe um e-mail válido.</span>
         </div>
         <div class="hp" aria-hidden="true"><label>Deixe este campo em branco<input type="text" name="website" tabindex="-1" autocomplete="off" /></label></div>
-        <label class="consent"><input type="checkbox" id="consent" required /> <span>Autorizo o contato e o tratamento dos meus dados conforme a <a href="https://proversaude.com.br/politica-de-privacidade" target="_blank" rel="noopener">Política de Privacidade</a> (LGPD).</span></label>
+        <label class="consent"><input type="checkbox" id="consent" required /> <span>Autorizo o contato e o tratamento dos meus dados conforme a <a href="politica-privacidade.html" target="_blank" rel="noopener">Política de Privacidade</a> (LGPD).</span></label>
         <button type="submit" class="btn btn--accent btn--block btn--lg">Quero falar com um consultor</button>
         <p class="form-note">🔒 Seus dados estão seguros. Atendimento sem compromisso.</p>
       </div>
